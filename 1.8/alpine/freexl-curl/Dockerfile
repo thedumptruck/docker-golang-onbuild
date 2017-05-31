@@ -2,7 +2,7 @@ FROM golang:1.8-alpine
 
 RUN apk update && apk --no-cache add  build-base \
   make pkgconf wget ca-certificates  \
-  openssl openssl-dev git libssh2-dev
+  openssl git libssh2-dev
 RUN mkdir -p /go/tmp && \
   pkg-config --cflags freexl || cd /go/tmp  && \
     wget -c "http://www.gaia-gis.it/gaia-sins/freexl-1.0.2.tar.gz" && \
