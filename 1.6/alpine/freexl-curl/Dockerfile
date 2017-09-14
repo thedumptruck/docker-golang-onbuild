@@ -5,7 +5,7 @@ RUN apk update && apk --no-cache add  build-base \
   openssl openssl-dev git libssh2-dev
 RUN mkdir -p /go/tmp && \
   pkg-config --cflags freexl || cd /go/tmp  && \
-    wget -c "http://www.gaia-gis.it/gaia-sins/freexl-1.0.2.tar.gz" && \
+    wget -c "http://www.gaia-gis.it/gaia-sins/freexl-sources/freexl-1.0.2.tar.gz" && \
     tar -xvzf freexl-*.tar.gz && \
     cd freexl-*/ && \
     ./configure --prefix=/usr && \
